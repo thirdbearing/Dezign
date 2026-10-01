@@ -18,7 +18,7 @@
     "hideParams": "Hide parameters",
     "notYet": "This lab isn't open yet.",
     "arrives": "Arrives in phase {phase}.",
-    "exportSoon": "Export becomes available with the Effects Lab.",
+    "exportSoon": "Export becomes available when the Effects lab opens.",
     "language": "Language",
     "phase": "Phase"
   },

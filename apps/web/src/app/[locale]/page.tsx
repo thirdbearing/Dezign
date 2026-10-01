@@ -16,8 +16,10 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
   setRequestLocale(locale);
   const t = await getTranslations("home");
 
+  // No grain on this page: it holds the < 1.8 s LCP budget (PLAN §4), and grain costs ~0.6 s.
+
   return (
-    <main className="grain min-h-dvh">
+    <main className="min-h-dvh bg-paper">
       <div className="mx-auto flex min-h-dvh max-w-6xl flex-col px-4 py-6 sm:px-8 sm:py-10">
         <header className="flex items-center justify-between border-b border-rule pb-3">
           <span className="slug text-ink-soft">{t("status")}</span>

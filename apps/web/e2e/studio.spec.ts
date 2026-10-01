@@ -61,7 +61,19 @@ test.describe("studio shell", () => {
 
   test("export is disabled until the Effects Lab ships", async ({ page }) => {
     await page.goto("/studio/effects");
-    await expect(page.getByRole("button", { name: "Ekspor" })).toBeDisabled();
+    const exportButton = page.getByRole("button", { name: "Ekspor" });
+    // aria-disabled (not disabled) so it stays focusable and explains itself.
+    await expect(exportButton).toHaveAttribute("aria-disabled", "true");
+    await expect(exportButton).toHaveAccessibleDescription(
+      "Ekspor tersedia setelah Lab Efek hadir.",
+    );
+    // Activating it reveals the reason (opens the sheet on phones) instead of doing nothing.
+    // Keyboard activation also proves it stays focusable (Playwright's click() refuses
+    // aria-disabled elements, unlike real pointers).
+    await exportButton.focus();
+    await page.keyboard.press("Enter");
+    await expect(page.locator("#export-reason")).toBeFocused();
+    await expect(page.locator("#export-reason")).toBeInViewport();
   });
 
   test("has no horizontal overflow and no console errors", async ({ page }) => {
@@ -76,6 +88,16 @@ test.describe("studio shell", () => {
   });
 });
 
+test.describe("desktop parameter panel", () => {
+  test.skip(({ isMobile }) => !!isMobile, "desktop only");
+
+  test("is always open and has no toggle in the tab order", async ({ page }) => {
+    await page.goto("/studio/effects");
+    await expect(page.getByRole("button", { name: /parameter/i })).toHaveCount(0);
+    await expect(page.getByText("Lab ini belum dibuka.")).toBeInViewport();
+  });
+});
+
 test.describe("mobile parameter sheet", () => {
   test.skip(({ isMobile }) => !isMobile, "bottom sheet only exists on phones");
 
@@ -83,7 +105,10 @@ test.describe("mobile parameter sheet", () => {
     await page.goto("/studio/effects");
     const toggle = page.getByRole("button", { name: "Tampilkan parameter" });
     await expect(toggle).toHaveAttribute("aria-expanded", "false");
-    await expect(page.getByText("Lab ini belum dibuka.")).not.toBeInViewport();
+    // Peeking: the rest of the sheet sits under the lab bar, which covers it.
+    const barTop = (await page.getByRole("navigation", { name: "Lab" }).boundingBox())!.y;
+    const hiddenTop = (await page.getByText("Lab ini belum dibuka.").boundingBox())!.y;
+    expect(hiddenTop).toBeGreaterThanOrEqual(barTop);
     await toggle.click();
     const close = page.getByRole("button", { name: "Sembunyikan parameter" });
     await expect(close).toHaveAttribute("aria-expanded", "true");

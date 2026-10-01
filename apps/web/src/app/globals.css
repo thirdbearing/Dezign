@@ -37,8 +37,11 @@
   --misregister-a: var(--riso-pink);
   --misregister-b: var(--riso-blue);
 
-  --grain-opacity: 0.09;
-  --grain-blend: multiply;
+  /* Speckle strength (see .grain): paper is near white, so light specks barely show there. */
+  --grain-dark: 0.07;
+  --grain-light: 0.5;
+  --grain-dark-bed: 0.06;
+  --grain-light-bed: 0.35;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,8 +59,10 @@
     --selection: var(--riso-blue);
     --on-ink: #121212;
     --misregister-b: var(--riso-yellow);
-    --grain-opacity: 0.07;
-    --grain-blend: screen;
+    --grain-dark: 0.3;
+    --grain-light: 0.09;
+    --grain-dark-bed: 0.3;
+    --grain-light-bed: 0.08;
   }
 }
 
@@ -75,8 +80,10 @@
   --selection: var(--riso-blue);
   --on-ink: #121212;
   --misregister-b: var(--riso-yellow);
-  --grain-opacity: 0.07;
-  --grain-blend: screen;
+  --grain-dark: 0.3;
+  --grain-light: 0.09;
+  --grain-dark-bed: 0.3;
+  --grain-light-bed: 0.08;
 }
 
 @theme inline {
@@ -149,23 +156,43 @@
     line-height: 1;
   }
 
-  /* Printed grain over a surface; decorative only, never intercepts input. */
+  /*
+   * Printed paper tooth: dark and light specks from two fractal-noise tiles (different seeds),
+   * drawn as masks over solid ink so the stock keeps its average tone. Masks, unlike background
+   * images, are never Largest Contentful Paint candidates, and the ~400-byte SVGs need no request.
+   * Decorative only; never intercepts input.
+   */
   .grain {
     position: relative;
     isolation: isolate;
   }
+  .grain::before,
   .grain::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    /* Procedural paper grain: an SVG fractal-noise tile rasterised by the browser, ~300 bytes,
-       no request, so it paints with the stylesheet. */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='128' height='128' filter='url%28%23g%29'/%3E%3C/svg%3E");
-    background-size: 128px 128px;
-    opacity: var(--grain-opacity);
-    mix-blend-mode: var(--grain-blend);
+    mask-size: 160px 160px;
+    -webkit-mask-size: 160px 160px;
+  }
+  .grain::before {
+    background: #000;
+    opacity: var(--grain-dark);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 -1.55'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url%28%23g%29'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 -1.55'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url%28%23g%29'/%3E%3C/svg%3E");
+  }
+  .grain::after {
+    background: #fff;
+    opacity: var(--grain-light);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 -1.55'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url%28%23g%29'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 -1.55'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url%28%23g%29'/%3E%3C/svg%3E");
+  }
+  .grain.bg-press-bed::before {
+    opacity: var(--grain-dark-bed);
+  }
+  .grain.bg-press-bed::after {
+    opacity: var(--grain-light-bed);
   }
 
   /*
@@ -192,6 +219,29 @@
     box-shadow:
       -2px -1px 0 0 var(--misregister-a),
       2px 1px 0 0 var(--misregister-b);
+  }
+
+  /* Screen tint: a halftone of black ink, the riso way to mark an area as inactive. A gradient,
+     not an image, so it costs nothing to load. */
+  .screen-tint {
+    background-color: var(--paper);
+    background-image: radial-gradient(var(--ink) 0.8px, transparent 1.05px);
+    background-size: 4px 4px;
+  }
+
+  /* Highlighter pass in riso yellow over text the interface points at. */
+  [data-flash] {
+    animation: flash 1.4s var(--ease-press);
+    outline: none;
+  }
+  @keyframes flash {
+    0%,
+    40% {
+      background-color: color-mix(in srgb, var(--riso-yellow) 70%, transparent);
+    }
+    100% {
+      background-color: transparent;
+    }
   }
 
   /* Wordmark: the same word printed in three drums, slightly off register. */
@@ -235,6 +285,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  [data-flash] {
+    animation-duration: 0.01ms;
+  }
   .misregister,
   .misregister:active {
     transition: none;

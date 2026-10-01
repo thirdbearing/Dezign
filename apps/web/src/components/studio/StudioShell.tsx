@@ -1,23 +1,39 @@
 import { getTranslations } from "next-intl/server";
 import { LABS, type LabId } from "@/lib/labs";
 import { Artboard } from "./Artboard";
+import { HalftoneProof, type IdentityDrum } from "./HalftoneProof";
 import { LabRail } from "./LabRail";
 import { ParamSheet } from "./ParamSheet";
+import { EXPORT_REASON_ID } from "@/lib/studio-events";
 import { TopStrip } from "./TopStrip";
 
 const ARTBOARD = { width: 1080, height: 1350 };
+
+/**
+ * Placeholder proofs print in the identity inks only (pink, blue, yellow). Teal and bright red are
+ * reserved for state, so with seven labs and three inks the drums repeat by design.
+ */
+const LAB_DRUMS = {
+  effects: "pink",
+  poster: "blue",
+  type: "yellow",
+  pattern: "pink",
+  shape: "blue",
+  "3d": "yellow",
+  play: "pink",
+} as const satisfies Record<LabId, IdentityDrum>;
 
 export async function StudioShell({ lab }: { lab: LabId }) {
   const t = await getTranslations();
   const phase = LABS.find((l) => l.id === lab)?.phase ?? 0;
 
   return (
-    <div className="grid h-dvh grid-cols-1 grid-rows-[48px_minmax(0,1fr)_64px] overflow-hidden md:grid-cols-[76px_minmax(0,1fr)_320px] md:grid-rows-[48px_minmax(0,1fr)]">
+    <div className="grid h-dvh grid-cols-1 grid-rows-[48px_minmax(0,1fr)_64px] overflow-hidden md:grid-cols-[64px_minmax(0,1fr)_320px] md:grid-rows-[48px_minmax(0,1fr)]">
       <TopStrip lab={lab} artboard={ARTBOARD} />
       <LabRail active={lab} />
       <Artboard {...ARTBOARD}>
-        <div className="flex h-full flex-col justify-between p-[6%] text-[#121212]">
-          <p className="slug text-[#4a4a48]">{t(`labs.${lab}.name`)}</p>
+        <div className="flex h-full flex-col justify-between gap-[5%] p-[6%] text-[#121212]">
+          <HalftoneProof drum={LAB_DRUMS[lab]} />
           <div className="space-y-3">
             <p className="text-[clamp(1.25rem,4.2cqw,2.75rem)] leading-[1.05] font-bold text-balance">
               {t(`labs.${lab}.blurb`)}
@@ -46,7 +62,9 @@ export async function StudioShell({ lab }: { lab: LabId }) {
               </dd>
             </div>
           </dl>
-          <p className="text-sm text-ink-soft">{t("studio.exportSoon")}</p>
+          <p id={EXPORT_REASON_ID} tabIndex={-1} className="text-sm text-ink-soft">
+            {t("studio.exportSoon")}
+          </p>
         </div>
       </ParamSheet>
     </div>

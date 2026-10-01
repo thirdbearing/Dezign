@@ -3,6 +3,7 @@ import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { LabId } from "@/lib/labs";
 import { LocaleSwitch } from "../LocaleSwitch";
 import { Wordmark } from "../Wordmark";
+import { ExportButton } from "./ExportButton";
 
 export async function TopStrip({
   lab,
@@ -14,7 +15,7 @@ export async function TopStrip({
   const t = await getTranslations("studio");
 
   return (
-    <header className="col-span-full flex items-center gap-3 border-b border-rule bg-paper pl-3 md:gap-4 md:pl-4">
+    <header className="grain col-span-full flex items-center gap-3 border-b border-rule bg-paper pl-3 md:gap-4 md:pl-4">
       <Link href="/" className="shrink-0 text-[1.375rem]">
         <Wordmark />
       </Link>
@@ -25,14 +26,7 @@ export async function TopStrip({
         </span>
       </div>
       <LocaleSwitch path={`/studio/${lab}`} />
-      <button
-        type="button"
-        disabled
-        title={t("exportSoon")}
-        className="h-full shrink-0 border-l border-rule bg-ink px-4 font-semibold text-on-ink disabled:cursor-not-allowed disabled:bg-transparent disabled:text-ink-faint md:px-6"
-      >
-        {t("export")}
-      </button>
+      <ExportButton label={t("export")} />
     </header>
   );
 }

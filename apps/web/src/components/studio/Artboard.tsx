@@ -19,7 +19,7 @@ export async function Artboard({
 
   return (
     <main className="grain [container-type:size] relative bg-press-bed md:row-start-2">
-      <div className="absolute inset-0 grid place-items-center pb-24 md:pb-0">
+      <div className="absolute inset-0 grid place-items-center pb-28 md:pb-0">
         <figure className="flex flex-col items-center gap-9">
           <div
             className="relative"

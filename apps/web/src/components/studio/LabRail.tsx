@@ -20,7 +20,7 @@ export async function LabRail({ active }: { active: LabId }) {
   return (
     <nav
       aria-label={t("studio.nav")}
-      className="order-last row-start-3 border-t border-rule bg-paper md:order-none md:row-start-2 md:border-t-0 md:border-r"
+      className="grain relative z-20 order-last row-start-3 border-t border-rule bg-paper md:order-none md:row-start-2 md:border-t-0 md:border-r"
     >
       <ul className="flex h-full items-stretch justify-between overflow-x-auto md:flex-col md:justify-start md:gap-1 md:overflow-visible md:py-3">
         {LABS.map((lab) => {
