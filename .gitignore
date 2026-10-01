@@ -1,0 +1,21 @@
+# deps & build
+node_modules/
+.next/
+dist/
+build/
+.turbo/
+coverage/
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+
+# Claude Code personal settings
+.claude/settings.local.json
+# impeccable platform binary (16MB) — re-download: npx impeccable install
+.claude/skills/impeccable/scripts/bin/
+
+# OS
+.DS_Store
