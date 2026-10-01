@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "Grafish — a graphic design studio in your browser",
+    "description": "Image effects, posters, fonts, patterns, shapes, and 3D in one lightweight studio."
+  },
+  "home": {
+    "lede": "A print studio in the browser. Image effects that aren't generic, a font library of its own, patterns, shapes, and 3D you can bake into 2D effects, all on one canvas.",
+    "open": "Open Studio",
+    "status": "Development preview · phase 0"
+  },
+  "studio": {
+    "nav": "Labs",
+    "export": "Export",
+    "untitled": "Untitled",
+    "artboard": "IG Poster",
+    "params": "Parameters",
+    "showParams": "Show parameters",
+    "hideParams": "Hide parameters",
+    "notYet": "This lab isn't open yet.",
+    "arrives": "Arrives in phase {phase}.",
+    "exportSoon": "Export becomes available with the Effects Lab.",
+    "language": "Language",
+    "phase": "Phase"
+  },
+  "labs": {
+    "effects": {
+      "name": "Effects",
+      "blurb": "Halftone, dither, stipple, ASCII, glitch, and more on your images."
+    },
+    "poster": { "name": "Poster", "blurb": "Artboards, layers, type, and per-layer effects." },
+    "type": {
+      "name": "Type",
+      "blurb": "Font library, tester, waterfall, glyphs, and text effects."
+    },
+    "pattern": { "name": "Pattern", "blurb": "Generative patterns and seamless tiles." },
+    "shape": { "name": "Shape", "blurb": "Pen, nodes, booleans, and blobs." },
+    "3d": { "name": "3D", "blurb": "Real 3D models on the canvas, baked for 2D effects." },
+    "play": { "name": "Play", "blurb": "Tic-tac-toe skinned with your patterns and fonts." }
+  }
+}

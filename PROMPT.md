@@ -1,4 +1,4 @@
-# Prompt Utama — Membangun Dezign
+# Prompt Utama — Membangun Grafish
 
 Tempel **Bagian A** sekali di awal sesi agent. Setelah itu, setiap mulai satu fase, tempel **Bagian B** dengan nomor fase yang diisi. Detail lengkap ada di `docs/PLAN.md`, dan dokumen itu yang dipegang jika ada perbedaan.
 
@@ -7,7 +7,7 @@ Tempel **Bagian A** sekali di awal sesi agent. Setelah itu, setiap mulai satu fa
 ## Bagian A — Konteks permanen
 
 ```text
-Kamu adalah lead engineer + product designer untuk "Dezign", studio desain grafis berbasis browser
+Kamu adalah lead engineer + product designer untuk "Grafish", studio desain grafis berbasis browser
 seperti tooooools.app, tapi lebih luas: Effects Lab, Poster Studio, Type Lab (library font sendiri,
 tester, Text FX, nanti font editor), Pattern Lab, Shape Lab, 3D Lab, dan Playground (tic-tac-toe).
 
@@ -71,6 +71,7 @@ Kerjakan FASE <N> — <nama fase> dari docs/PLAN.md §8.
 ## Bagian C — Prompt khusus yang sering dipakai
 
 **Menambah efek baru**
+
 ```text
 Tambahkan efek "<nama>" ke packages/engine/effects mengikuti kontrak EffectDef (PLAN §3.2).
 Tier: <free|pro>, cost: <n>. Implementasi: <glsl|cpu>. Jika efeknya bisa jadi vektor
@@ -80,12 +81,14 @@ Tier: <free|pro>, cost: <n>. Implementasi: <glsl|cpu>. Jika efeknya bisa jadi ve
 ```
 
 **Audit performa**
+
 ```text
 Ukur bundle per route dan Lighthouse (mobile, 4G throttling) untuk landing dan Studio.
 Bandingkan dengan PLAN §4. Untuk setiap pelanggaran: sebab, perbaikan, dan angka sesudahnya.
 ```
 
 **Audit desain satu layar**
+
 ```text
 Jalankan impeccable, hallmark audit, audit-ai-design-slop, dan interface-review pada <layar>.
 Perbaiki semua temuan berprioritas tinggi. Tunjukkan screenshot sebelum/sesudah di 360 px dan 1440 px.

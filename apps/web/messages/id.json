@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Grafish — studio desain grafis di browser",
+    "description": "Efek gambar, poster, font, pattern, shape, dan 3D dalam satu studio yang ringan."
+  },
+  "home": {
+    "lede": "Studio cetak di browser. Efek gambar yang tidak generik, library font sendiri, pattern, shape, dan 3D yang bisa di-bake jadi efek 2D, semuanya di satu kanvas.",
+    "open": "Buka Studio",
+    "status": "Pratinjau pengembangan · fase 0"
+  },
+  "studio": {
+    "nav": "Lab",
+    "export": "Ekspor",
+    "untitled": "Tanpa judul",
+    "artboard": "Poster IG",
+    "params": "Parameter",
+    "showParams": "Tampilkan parameter",
+    "hideParams": "Sembunyikan parameter",
+    "notYet": "Lab ini belum dibuka.",
+    "arrives": "Hadir di fase {phase}.",
+    "exportSoon": "Ekspor tersedia setelah Effects Lab hadir.",
+    "language": "Bahasa",
+    "phase": "Fase"
+  },
+  "labs": {
+    "effects": {
+      "name": "Efek",
+      "blurb": "Halftone, dither, stipple, ASCII, glitch, dan lainnya pada gambar Anda."
+    },
+    "poster": { "name": "Poster", "blurb": "Artboard, layer, teks, dan efek per layer." },
+    "type": { "name": "Huruf", "blurb": "Library font, tester, waterfall, glyph, dan efek teks." },
+    "pattern": { "name": "Pola", "blurb": "Pattern generatif dan tile seamless." },
+    "shape": { "name": "Bentuk", "blurb": "Pen, node, boolean, dan blob." },
+    "3d": { "name": "3D", "blurb": "Model 3D langsung di kanvas, lalu di-bake untuk efek 2D." },
+    "play": { "name": "Main", "blurb": "Tic-tac-toe dengan skin dari pola dan font Anda." }
+  }
+}

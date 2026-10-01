@@ -4,6 +4,7 @@ node_modules/
 dist/
 build/
 .turbo/
+**/.turbo/
 coverage/
 *.tsbuildinfo
 
@@ -19,3 +20,10 @@ coverage/
 
 # OS
 .DS_Store
+
+# test & audit output
+**/test-results/
+**/playwright-report/
+**/.lighthouseci/
+.impeccable/review/
+.impeccable/live/

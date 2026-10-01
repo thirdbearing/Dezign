@@ -1,0 +1,26 @@
+{
+  "name": "grafish",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev --filter=@grafish/web",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "e2e": "pnpm --filter @grafish/web e2e",
+    "budget": "pnpm --filter @grafish/web budget",
+    "lhci": "pnpm --filter @grafish/web lhci",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.9.9",
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "turbo": "2.11.6",
+    "typescript": "6.0.3"
+  }
+}
