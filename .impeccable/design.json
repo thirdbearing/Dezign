@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T12:30:00Z",
+  "title": "Design System: Grafish",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper Stock",
+        "canonical": "oklch(97.5% 0.004 106.5)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106.5)",
+          "oklch(26% 0.004 106.5)",
+          "oklch(37% 0.004 106.5)",
+          "oklch(48% 0.004 106.5)",
+          "oklch(60% 0.004 106.5)",
+          "oklch(71% 0.004 106.5)",
+          "oklch(83% 0.004 106.5)",
+          "oklch(95% 0.004 106.5)"
+        ]
+      },
+      "press-bed": {
+        "role": "neutral",
+        "displayName": "Press Bed",
+        "canonical": "oklch(91.5% 0.005 95.1)",
+        "tonalRamp": [
+          "oklch(15% 0.005 95.1)",
+          "oklch(26% 0.005 95.1)",
+          "oklch(37% 0.005 95.1)",
+          "oklch(48% 0.005 95.1)",
+          "oklch(60% 0.005 95.1)",
+          "oklch(71% 0.005 95.1)",
+          "oklch(83% 0.005 95.1)",
+          "oklch(95% 0.005 95.1)"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(71% 0 0)",
+          "oklch(83% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Riso Black",
+        "canonical": "oklch(18.2% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(71% 0 0)",
+          "oklch(83% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(40.8% 0.003 106.5)",
+        "tonalRamp": [
+          "oklch(15% 0.003 106.5)",
+          "oklch(26% 0.003 106.5)",
+          "oklch(37% 0.003 106.5)",
+          "oklch(48% 0.003 106.5)",
+          "oklch(60% 0.003 106.5)",
+          "oklch(71% 0.003 106.5)",
+          "oklch(83% 0.003 106.5)",
+          "oklch(95% 0.003 106.5)"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink",
+        "canonical": "oklch(51.3% 0.006 95.2)",
+        "tonalRamp": [
+          "oklch(15% 0.006 95.2)",
+          "oklch(26% 0.006 95.2)",
+          "oklch(37% 0.006 95.2)",
+          "oklch(48% 0.006 95.2)",
+          "oklch(60% 0.006 95.2)",
+          "oklch(71% 0.006 95.2)",
+          "oklch(83% 0.006 95.2)",
+          "oklch(95% 0.006 95.2)"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "oklch(83.2% 0.007 97.4)",
+        "tonalRamp": [
+          "oklch(15% 0.007 97.4)",
+          "oklch(26% 0.007 97.4)",
+          "oklch(37% 0.007 97.4)",
+          "oklch(48% 0.007 97.4)",
+          "oklch(60% 0.007 97.4)",
+          "oklch(71% 0.007 97.4)",
+          "oklch(83% 0.007 97.4)",
+          "oklch(95% 0.007 97.4)"
+        ]
+      },
+      "riso-pink": {
+        "role": "secondary",
+        "displayName": "Fluorescent Pink",
+        "canonical": "oklch(69.3% 0.236 350.2)",
+        "tonalRamp": [
+          "oklch(15% 0.236 350.2)",
+          "oklch(26% 0.236 350.2)",
+          "oklch(37% 0.236 350.2)",
+          "oklch(48% 0.236 350.2)",
+          "oklch(60% 0.236 350.2)",
+          "oklch(71% 0.236 350.2)",
+          "oklch(83% 0.236 350.2)",
+          "oklch(95% 0.236 350.2)"
+        ]
+      },
+      "riso-blue": {
+        "role": "secondary",
+        "displayName": "Medium Blue",
+        "canonical": "oklch(46.7% 0.134 264.0)",
+        "tonalRamp": [
+          "oklch(15% 0.134 264.0)",
+          "oklch(26% 0.134 264.0)",
+          "oklch(37% 0.134 264.0)",
+          "oklch(48% 0.134 264.0)",
+          "oklch(60% 0.134 264.0)",
+          "oklch(71% 0.134 264.0)",
+          "oklch(83% 0.134 264.0)",
+          "oklch(95% 0.134 264.0)"
+        ]
+      },
+      "riso-yellow": {
+        "role": "secondary",
+        "displayName": "Riso Yellow",
+        "canonical": "oklch(92.1% 0.193 102.2)",
+        "tonalRamp": [
+          "oklch(15% 0.193 102.2)",
+          "oklch(26% 0.193 102.2)",
+          "oklch(37% 0.193 102.2)",
+          "oklch(48% 0.193 102.2)",
+          "oklch(60% 0.193 102.2)",
+          "oklch(71% 0.193 102.2)",
+          "oklch(83% 0.193 102.2)",
+          "oklch(95% 0.193 102.2)"
+        ]
+      },
+      "riso-teal": {
+        "role": "tertiary",
+        "displayName": "Teal (state)",
+        "canonical": "oklch(55.5% 0.094 201.4)",
+        "tonalRamp": [
+          "oklch(15% 0.094 201.4)",
+          "oklch(26% 0.094 201.4)",
+          "oklch(37% 0.094 201.4)",
+          "oklch(48% 0.094 201.4)",
+          "oklch(60% 0.094 201.4)",
+          "oklch(71% 0.094 201.4)",
+          "oklch(83% 0.094 201.4)",
+          "oklch(95% 0.094 201.4)"
+        ]
+      },
+      "riso-red": {
+        "role": "tertiary",
+        "displayName": "Bright Red (alert)",
+        "canonical": "oklch(65.7% 0.196 18.8)",
+        "tonalRamp": [
+          "oklch(15% 0.196 18.8)",
+          "oklch(26% 0.196 18.8)",
+          "oklch(37% 0.196 18.8)",
+          "oklch(48% 0.196 18.8)",
+          "oklch(60% 0.196 18.8)",
+          "oklch(71% 0.196 18.8)",
+          "oklch(83% 0.196 18.8)",
+          "oklch(95% 0.196 18.8)"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Black Stock",
+        "canonical": "oklch(20.0% 0.002 106.6)",
+        "tonalRamp": [
+          "oklch(15% 0.002 106.6)",
+          "oklch(26% 0.002 106.6)",
+          "oklch(37% 0.002 106.6)",
+          "oklch(48% 0.002 106.6)",
+          "oklch(60% 0.002 106.6)",
+          "oklch(71% 0.002 106.6)",
+          "oklch(83% 0.002 106.6)",
+          "oklch(95% 0.002 106.6)"
+        ]
+      },
+      "press-bed-dark": {
+        "role": "neutral",
+        "displayName": "Dark Press Bed",
+        "canonical": "oklch(15.4% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(71% 0 0)",
+          "oklch(83% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "ink-dark": {
+        "role": "primary",
+        "displayName": "Press White",
+        "canonical": "oklch(95.8% 0.007 97.4)",
+        "tonalRamp": [
+          "oklch(15% 0.007 97.4)",
+          "oklch(26% 0.007 97.4)",
+          "oklch(37% 0.007 97.4)",
+          "oklch(48% 0.007 97.4)",
+          "oklch(60% 0.007 97.4)",
+          "oklch(71% 0.007 97.4)",
+          "oklch(83% 0.007 97.4)",
+          "oklch(95% 0.007 97.4)"
+        ]
+      },
+      "ink-soft-dark": {
+        "role": "neutral",
+        "displayName": "Soft Press White",
+        "canonical": "oklch(78.2% 0.008 98.9)",
+        "tonalRamp": [
+          "oklch(15% 0.008 98.9)",
+          "oklch(26% 0.008 98.9)",
+          "oklch(37% 0.008 98.9)",
+          "oklch(48% 0.008 98.9)",
+          "oklch(60% 0.008 98.9)",
+          "oklch(71% 0.008 98.9)",
+          "oklch(83% 0.008 98.9)",
+          "oklch(95% 0.008 98.9)"
+        ]
+      },
+      "ink-faint-dark": {
+        "role": "neutral",
+        "displayName": "Faint Press White",
+        "canonical": "oklch(64.3% 0.007 97.4)",
+        "tonalRamp": [
+          "oklch(15% 0.007 97.4)",
+          "oklch(26% 0.007 97.4)",
+          "oklch(37% 0.007 97.4)",
+          "oklch(48% 0.007 97.4)",
+          "oklch(60% 0.007 97.4)",
+          "oklch(71% 0.007 97.4)",
+          "oklch(83% 0.007 97.4)",
+          "oklch(95% 0.007 97.4)"
+        ]
+      },
+      "rule-soft-dark": {
+        "role": "neutral",
+        "displayName": "Dark Soft Rule",
+        "canonical": "oklch(34.8% 0.003 106.6)",
+        "tonalRamp": [
+          "oklch(15% 0.003 106.6)",
+          "oklch(26% 0.003 106.6)",
+          "oklch(37% 0.003 106.6)",
+          "oklch(48% 0.003 106.6)",
+          "oklch(60% 0.003 106.6)",
+          "oklch(71% 0.003 106.6)",
+          "oklch(83% 0.003 106.6)",
+          "oklch(95% 0.003 106.6)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Wordmark",
+        "purpose": "The wordmark only; same treatment at 1.375rem in the top strip."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Current lab name at the head of the parameter sheet."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project title, definition values, button text."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sheet copy; secondary copy at 0.875rem in Soft Ink."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Entry page statement, max 38ch; 1.125rem on phones, 1.25rem from 640px."
+      },
+      "label": {
+        "displayName": "Slug",
+        "purpose": "Condensed caps label voice for titles, terms, dimensions, captions, locale codes, status."
+      }
+    },
+    "shadows": [
+      {
+        "name": "misregister-on",
+        "value": "-2px -1px 0 0 var(--misregister-a), 2px 1px 0 0 var(--misregister-b)",
+        "purpose": "Hover and current state; pink + blue on light, pink + yellow on dark."
+      },
+      {
+        "name": "misregister-pressed",
+        "value": "-1px 0 0 0 var(--misregister-a), 1px 0 0 0 var(--misregister-b)",
+        "purpose": "Active press, paired with translate 1px 1px."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 2px solid var(--focus); outline-offset: 2px",
+        "purpose": "Blue on light, pink on dark; inset offset on edge-flush controls."
+      },
+      {
+        "name": "screen-tint",
+        "value": "radial-gradient(var(--ink) 0.8px, transparent 1.05px) 0 0 / 4px 4px over var(--paper)",
+        "purpose": "Halftone marking unavailable (aria-disabled) actions."
+      },
+      {
+        "name": "grain",
+        "value": "two 160px fractal-noise SVG masks over #000 and #fff; light 0.07/0.5, bed 0.06/0.35, dark 0.3/0.09, dark bed 0.3/0.08",
+        "purpose": "Printed paper tooth on chrome and press bed; never on the entry page."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-press",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every state transition: a quick press-in."
+      },
+      {
+        "name": "misregister",
+        "value": "160ms",
+        "purpose": "Box-shadow and translate on misregistered controls."
+      },
+      {
+        "name": "sheet",
+        "value": "200ms transform",
+        "purpose": "Mobile parameter sheet and chevron; transform only."
+      },
+      {
+        "name": "flash",
+        "value": "1.4s, yellow 70% hold to 40% then fade",
+        "purpose": "Highlighter pass on text the interface points at."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transitions off, flash 0.01ms",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "base",
+        "value": "360px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one filled ink slab the chrome allows; misregisters on hover, presses in on active.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Buka Studio</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;background:var(--ink,#121212);color:var(--on-ink,#f7f7f4);font-family:var(--font-sans,Archivo,sans-serif);font-weight:600;font-size:1rem;text-decoration:none;border-radius:0;transition:box-shadow 160ms cubic-bezier(0.16,1,0.3,1),translate 160ms cubic-bezier(0.16,1,0.3,1)}.ds-btn-primary:hover{box-shadow:-2px -1px 0 0 #ff48b0,2px 1px 0 0 #3255a4}.ds-btn-primary:active{translate:1px 1px;box-shadow:-1px 0 0 0 #ff48b0,1px 0 0 0 #3255a4}.ds-btn-primary:focus-visible{outline:2px solid var(--focus,#3255a4);outline-offset:2px}"
+    },
+    {
+      "name": "Unavailable Button (Screen Tint)",
+      "kind": "button",
+      "refersTo": "button-unavailable",
+      "description": "aria-disabled action wearing a halftone screen; stays focusable and reveals its reason when activated.",
+      "html": "<button type=\"button\" aria-disabled=\"true\" class=\"ds-btn-unavailable\"><span>Ekspor</span></button>",
+      "css": ".ds-btn-unavailable{height:48px;padding:0 24px;border:0;border-left:1px solid var(--rule,#121212);border-radius:0;background-color:var(--paper,#f7f7f4);background-image:radial-gradient(var(--ink,#121212) 0.8px,transparent 1.05px);background-size:4px 4px;color:var(--ink-soft,#4a4a48);font-family:var(--font-sans,Archivo,sans-serif);font-weight:600;font-size:1rem;cursor:not-allowed}.ds-btn-unavailable span{background:var(--paper,#f7f7f4);padding:0 4px}.ds-btn-unavailable:focus-visible{outline:2px solid var(--focus,#3255a4);outline-offset:-4px}"
+    },
+    {
+      "name": "Lab Rail",
+      "kind": "nav",
+      "refersTo": "lab-rail-item",
+      "description": "Seven labs, icon tile over condensed caps label; the current tile fills ink and misregisters at rest.",
+      "html": "<nav class=\"ds-rail\"><a class=\"ds-rail-item\" aria-current=\"page\" href=\"#\"><span class=\"ds-rail-tile\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 18a6 6 0 0 0 0-12v12z\"/></svg></span><span class=\"ds-slug\">Efek</span></a><a class=\"ds-rail-item\" href=\"#\"><span class=\"ds-rail-tile\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\"><path d=\"M4 7V4h16v3M9 20h6M12 4v16\"/></svg></span><span class=\"ds-slug\">Huruf</span></a></nav>",
+      "css": ".ds-rail{display:flex;flex-direction:column;gap:4px;width:64px;padding:12px 0;background:var(--paper,#f7f7f4);border-right:1px solid var(--rule,#121212)}.ds-rail-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;height:64px;color:var(--ink-soft,#4a4a48);text-decoration:none}.ds-rail-item[aria-current=page]{color:var(--ink,#121212)}.ds-rail-tile{display:grid;place-items:center;width:32px;height:32px;transition:box-shadow 160ms cubic-bezier(0.16,1,0.3,1)}.ds-rail-item:hover .ds-rail-tile,.ds-rail-item[aria-current=page] .ds-rail-tile{box-shadow:-2px -1px 0 0 #ff48b0,2px 1px 0 0 #3255a4}.ds-rail-item[aria-current=page] .ds-rail-tile{background:var(--ink,#121212);color:var(--on-ink,#f7f7f4)}.ds-rail-item:focus-visible{outline:2px solid var(--focus,#3255a4);outline-offset:-2px}.ds-slug{font-family:var(--font-sans,Archivo,sans-serif);font-variation-settings:'wdth' 62;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.625rem;line-height:1}"
+    },
+    {
+      "name": "Slug",
+      "kind": "chip",
+      "refersTo": "label",
+      "description": "Condensed caps label voice: panel titles, terms, dimensions, captions, status.",
+      "html": "<span class=\"ds-slug-label\">1080 × 1350 · Poster IG</span>",
+      "css": ".ds-slug-label{font-family:var(--font-sans,Archivo,sans-serif);font-variation-settings:'wdth' 62;font-feature-settings:'tnum' 1;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.75rem;line-height:1;color:var(--ink-soft,#4a4a48)}"
+    },
+    {
+      "name": "Locale Switch",
+      "kind": "nav",
+      "refersTo": "locale-link",
+      "description": "Two condensed caps codes with 44px targets; current in full ink.",
+      "html": "<nav class=\"ds-locale\"><a href=\"#\" aria-current=\"true\">id</a><a href=\"#\">en</a></nav>",
+      "css": ".ds-locale{display:flex;gap:4px}.ds-locale a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:var(--ink-faint,#686763);text-decoration:none;font-family:var(--font-sans,Archivo,sans-serif);font-variation-settings:'wdth' 62;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.75rem;line-height:1}.ds-locale a[aria-current]{color:var(--ink,#121212)}.ds-locale a:hover{color:var(--ink,#121212)}.ds-locale a:focus-visible{outline:2px solid var(--focus,#3255a4);outline-offset:2px}"
+    },
+    {
+      "name": "Parameter Sheet",
+      "kind": "card",
+      "refersTo": "param-sheet",
+      "description": "Paper panel with slug header over a soft rule and definition rows; bottom sheet peeking 96px on phones.",
+      "html": "<aside class=\"ds-sheet\"><h2 class=\"ds-sheet-head\">Parameter</h2><div class=\"ds-sheet-body\"><p class=\"ds-sheet-title\">Efek</p><dl class=\"ds-dl\"><div><dt>Fase</dt><dd>1</dd></div><div><dt>Poster IG</dt><dd>1080 × 1350</dd></div></dl></div></aside>",
+      "css": ".ds-sheet{width:320px;background:var(--paper,#f7f7f4);color:var(--ink,#121212);border-left:1px solid var(--rule,#121212);font-family:var(--font-sans,Archivo,sans-serif);font-feature-settings:'tnum' 1}.ds-sheet-head{margin:0;height:48px;display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--rule-soft,#c9c8c3);font-variation-settings:'wdth' 62;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.75rem;line-height:1}.ds-sheet-body{padding:16px}.ds-sheet-title{margin:0 0 16px;font-size:1.25rem;font-weight:700;line-height:1.25}.ds-dl{margin:0;border-top:1px solid var(--rule-soft,#c9c8c3)}.ds-dl div{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--rule-soft,#c9c8c3)}.ds-dl dt{font-variation-settings:'wdth' 62;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.75rem;color:var(--ink-faint,#686763)}.ds-dl dd{margin:0;font-weight:600}"
+    },
+    {
+      "name": "Artboard with Print Marks",
+      "kind": "custom",
+      "refersTo": "artboard-sheet",
+      "description": "White sheet on the grained press bed with corner crop marks and registration targets.",
+      "html": "<div class=\"ds-bed\"><div class=\"ds-art\"><i class=\"ds-crop tl\"></i><i class=\"ds-crop br\"></i><svg class=\"ds-reg\" viewBox=\"-9 -9 18 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\"><circle r=\"5\"/><path d=\"M-9 0H9M0-9V9\"/></svg></div></div>",
+      "css": ".ds-bed{display:grid;place-items:center;padding:48px;background:var(--press-bed,#e4e3df);color:var(--ink,#121212)}.ds-art{position:relative;width:160px;aspect-ratio:1080/1350;background:var(--sheet,#fff)}.ds-crop{position:absolute;width:12px;height:12px}.ds-crop.tl{left:-18px;top:-18px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;clip-path:polygon(0 100%,6px 100%,6px 0,100% 0,100% 6px,100% 100%)}.ds-crop.br{right:-18px;bottom:-18px;border-left:1px solid currentColor;border-top:1px solid currentColor}.ds-reg{position:absolute;width:18px;height:18px;left:50%;top:-24px;transform:translateX(-50%)}"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Grafish in condensed 900 caps, printed in pink and blue passes off register under black.",
+      "html": "<span class=\"ds-wordmark\"><span data-pass=\"pink\" aria-hidden=\"true\">Grafish</span><span data-pass=\"blue\" aria-hidden=\"true\">Grafish</span><span data-pass=\"ink\">Grafish</span></span>",
+      "css": ".ds-wordmark{position:relative;display:inline-block;font-family:var(--font-sans,Archivo,sans-serif);font-variation-settings:'wdth' 62;font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;line-height:0.82;font-size:4.5rem}.ds-wordmark>[data-pass]{position:absolute;inset:0;mix-blend-mode:multiply}.ds-wordmark>[data-pass=pink]{color:#ff48b0;translate:-0.016em -0.01em}.ds-wordmark>[data-pass=blue]{color:#3255a4;translate:0.014em 0.012em}.ds-wordmark>[data-pass=ink]{position:relative;mix-blend-mode:normal;color:var(--ink,#121212)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Riso Print Room",
+    "overview": "Grafish is a print room, not a dark pro editor. The interface is paper stock and black drum ink: hairline rules, square corners, condensed caps slugs, and a faint printed tooth on every chrome surface. The user's artboard sits on a grey press bed with crop marks and registration targets at its trim, so the work reads as a proof on a sheet, and the chrome around it stays quiet enough never to compete with it.\n\nRiso inks are a vocabulary, not a decoration. Fluorescent pink, medium blue and yellow mark identity (a lab's drum, the wordmark's passes, the misregistered state); teal and bright red are held back for state and alerts. Ink appears in the chrome only as small marks, hairline offsets and highlighter passes; the only place ink fills an area is the artboard, because that is artwork. The dark theme is black stock printed with white and fluorescent ink, not a graphite editor.\n\nMotion is a quick press-in, nothing floats. The signature interaction is misregistration: a current, hovered or pressed control prints a second ink pass 2px off register, the way a real drum lands slightly off on the sheet. The rejected default is the category's graphite panels with one neon accent and everything floating in cards.",
+    "keyCharacteristics": [
+      "Paper ground (light) or black stock (dark), one black/white ink for text and rules.",
+      "Three identity inks plus two state inks; inks never flood chrome.",
+      "Archivo variable only: condensed caps for labels, normal width for UI text, tabular figures everywhere.",
+      "Square corners, 1px rules, no soft shadows, no floating cards.",
+      "Misregistration as the single hard-offset device; halftone screen tint for unavailable.",
+      "Functional print marks: crop marks, registration targets, slugs."
+    ],
+    "rules": [
+      {
+        "name": "The Drum Identity Rule",
+        "body": "Identity is printed in pink, blue and yellow only. Seven labs share three drums, so drums repeat by design; never pull teal or red into identity to make them unique.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-Is-Artwork Rule",
+        "body": "Riso inks never fill large areas of the chrome. Ink at scale is allowed only on the artboard, because that is artwork. In the chrome, ink is a 1-2px pass, a small mark, or a transient highlighter.",
+        "section": "colors"
+      },
+      {
+        "name": "The Focus Swap Rule",
+        "body": "Focus is a 2px outline in blue on light stock and pink on dark stock, offset 2px (inset where the control is flush to an edge).",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Widths Rule",
+        "body": "Condensed caps (wdth 62) are for slugs, labels and the wordmark; everything a user reads as a sentence is normal width (wdth 100). Never set running text condensed.",
+        "section": "typography"
+      },
+      {
+        "name": "The Steady Figures Rule",
+        "body": "Tabular figures are on globally. Dimensions, phases and parameter values must not reflow as they change.",
+        "section": "typography"
+      },
+      {
+        "name": "The Peek Rule",
+        "body": "The mobile parameter sheet peeks 96px and moves with transform only; opening it never triggers layout.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Offset Rule",
+        "body": "Misregistration, a 2px offset ink pass, is the only hard-offset shadow allowed, and only on hover, active and current states. No resting offset shadows, no soft ambient shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Grain Budget Rule",
+        "body": "Grain lives on the chrome and the press bed, never on the entry page, which holds a sub-1.8s LCP budget.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep chrome in paper and ink; let pink, blue and yellow appear only as drum identity, misregister passes, focus, selection and highlighter.",
+      "Do repeat drums across labs; three identity inks for seven labs is the design.",
+      "Do mark unavailable actions with the halftone screen tint and aria-disabled, and reveal the reason when activated.",
+      "Do set slugs as condensed caps (wdth 62, 700, 0.75rem, 0.06em) and all sentences at normal width, with tabular figures.",
+      "Do use 1px rules and square corners; full ink between regions, soft rule within a panel.",
+      "Do keep text at or above Faint Ink (5.3:1 on paper).",
+      "Do move the mobile sheet with transform only and keep motion to a quick press-in on the press curve (cubic-bezier(0.16, 1, 0.3, 1)), disabled under reduced motion."
+    ],
+    "donts": [
+      "Don't fill large chrome areas with riso ink; ink at scale belongs on the artboard.",
+      "Don't use teal or bright red for identity, and don't set either as small text on paper.",
+      "Don't use native disabled on actions that need an explanation.",
+      "Don't add hard-offset shadows other than misregistration, and never show misregistration at rest except on the current item.",
+      "Don't add rounded corners, soft shadows, or floating cards.",
+      "Don't put grain on the entry page.",
+      "Don't set running text condensed or in caps."
+    ]
+  }
+}
